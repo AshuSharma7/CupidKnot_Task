@@ -64,8 +64,8 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
   Future<void> _selectDate(BuildContext context) async {
     final DateTime? picked = await showDatePicker(
         context: context,
-        firstDate: DateTime.now().subtract(Duration(days: 6570)),
-        initialDate: DateTime(2015, 8),
+        firstDate: DateTime(1900),
+        initialDate: DateTime.now().subtract(Duration(days: 6570)),
         lastDate: DateTime(2101));
     if (picked != null && picked != selectedDate)
       setState(() {
